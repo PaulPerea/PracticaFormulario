@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(247, 247, 247, 0.788);
+}
+.contenedor{
+    width: 400px;
+    background-color: rgba(255, 249, 249, 0.986);
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    font-family: 'calibri';
+    color: rgba(230, 230, 230, 0.767);
+    box-shadow: 4px 8px 10px 8px;
+}
+.contenedor .controles{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.966);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid rgb(255, 255, 255);
+}
+.contenedor #boton{
+    width: 100%;
+    background-color: #1f53c5;
+    border: none;
+    padding: 11px;
+    color: white;
+    border-radius: 3px;
+}
+.contenedor h3{
+    color: rgba(34, 34, 34, 0.822);
+}
