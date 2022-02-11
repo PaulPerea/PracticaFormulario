@@ -5,10 +5,10 @@ function habilitar() {
     im2 = document.getElementById("correo").value;
     im3 = document.getElementById("numero").value;
     val = 0;
-    console.log(val);
+    
     if (im1 == "") {
         console.log("entra aqui");
-        console.log(val);
+        
         
     } else if (!im2 == "") {
         console.log("entra aqui 2");
@@ -16,7 +16,7 @@ function habilitar() {
     } else{
         val =0;
     }
-    console.log(val);
+    
     if (val == 0) {
         document.getElementById("boton").disabled=true;
         document.getElementById("boton").innerHTML = "Completar Formulario";
