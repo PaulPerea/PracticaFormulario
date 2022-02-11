@@ -5,20 +5,27 @@ function habilitar() {
     im2 = document.getElementById("correo").value;
     im3 = document.getElementById("numero").value;
     val = 0;
-
+    console.log(val);
     if (im1 == "") {
+        console.log("entra aqui");
+        console.log(val);
+        
+    } else if (!im2 == "") {
+        console.log("entra aqui 2");
         val++;
-    }if (im2 == "") {
-        val++;
-    }if(im3 == ""){
-        val++;
+    } else{
+        val =0;
     }
     console.log(val);
     if (val == 0) {
-        document.getElementById("boton").disabled=false;
-    } else {
         document.getElementById("boton").disabled=true;
+        document.getElementById("boton").innerHTML = "Completar Formulario";
+        document.getElementById("boton").style.color = "#BFBAB9";
+    } else {
+        document.getElementById("boton").innerHTML = "Formulario Completado";
+        document.getElementById("boton").disabled=false;
     }
+
 }
 document.getElementById("nombre").addEventListener("keyup", habilitar);
 document.getElementById("correo").addEventListener("keyup", habilitar);
@@ -31,7 +38,7 @@ document.getElementById("boton").addEventListener("click",() =>{
 function texto(e) {
     key=e.keyCode || e.which;
     tecla = String.fromCharCode(key).toString();
-    letras = "ABCDEFGHIJKLMNOPQRSTUWXYZÁÉÍÓÚabcdefghijklmnopqrstuwxyz";
+    letras = "ABCDEFGHIJKLMNOPQRSTUWXYZÁÉÍÓÚabcdefghijklmnopqrstuwxvyz";
 
     especiales = [8,13];
     teclas_especiales = false;
@@ -50,15 +57,14 @@ function texto(e) {
 
 // correo
 
-const nombre = document.getElementById("nombre")
-const email = document.getElementById("correo")
+const nombre = document.getElementById("nombre");
+const email = document.getElementById("correo");
 
 form.addEventListener("submit", e=>{
-    e.preventDefault()
-    let adve="";
-    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    
+    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (!regexEmail.test(email.value)) {
-        alert("Direccion Universal")
+        alert("Completar correo");
     }
 })
 
